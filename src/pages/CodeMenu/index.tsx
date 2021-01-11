@@ -6,38 +6,12 @@ import HeaderNav from "../../components/HeaderNav";
 import {
   Container,
   Content,
-  ExpandBarContainer,
-  ExpandBar,
   Buttons,
   ShoppingButton,
   ShoppingButtonInfo,
   ShoppingButtonTitle,
   ShoppingButtonDescription,
-  RightArrow,
-  ButtonsInRow,
-  InterTravelButton,
-  InterTravelButtonTitle,
-  InterTravelButtonDescription,
-  ShellBoxButton,
-  ShellBoxButtonTitle,
-  ShellBoxButtonDescription,
-  LifeStyleMenuItem,
-  LifeStyleMenuImage,
-  LifeStyleMenuTitle,
   Separator,
-  BottomCards,
-  SupportCard,
-  SupportCardInfo,
-  SupportAvatarContainer,
-  SupportAvatar,
-  SupportQuestion,
-  SupportQuestionFirstLine,
-  SupportQuestionSecondLine,
-  SupportCardButton,
-  ISafeCard,
-  ISafeCardGenerate,
-  ISafeCardButton,
-  ISafeCardGenerateText,
   Footer,
   FooterLeftSide,
   FooterTitle,
@@ -54,13 +28,8 @@ interface Props {
 }
 
 const CodeMenu: React.FC<Props> = ({ navigation }) => {
-  const [menuIsExpanded, setMenuIsExpanded] = useState(false);
-
+ 
   const scrollViewRef = useRef<ScrollView>(null);
-
-  function handleScrollToTop() {
-    scrollViewRef.current?.scrollTo({ y: 0, animated: true });
-  }
 
   return (
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
@@ -71,30 +40,39 @@ const CodeMenu: React.FC<Props> = ({ navigation }) => {
       />
       <Content>        
         <Buttons>
-          <ShoppingButton onPress={() => {navigation.navigate('Home')}}>
+          <ShoppingButton onPress={() => {navigation.navigate('CodeQ')}}>
             <SVGLoader name="shopping_cart" width={41} height={40} />
             <ShoppingButtonInfo>
               <ShoppingButtonTitle>Código Q</ShoppingButtonTitle>
               <ShoppingButtonDescription>
-                Aproveite todos os produtos com cashback!
+              O Código Q foi desenvolvido pelo governo britânico como forma de facilitar a troca de informações.
               </ShoppingButtonDescription>
             </ShoppingButtonInfo>            
           </ShoppingButton>
-          <ShoppingButton onPress={() => {navigation.navigate('Home')}}>
+          <ShoppingButton onPress={() => {navigation.navigate('CodeS')}}>
             <SVGLoader name="shopping_cart" width={41} height={40} />
             <ShoppingButtonInfo>
               <ShoppingButtonTitle>Código S</ShoppingButtonTitle>
               <ShoppingButtonDescription>
-                Aproveite todos os produtos com cashback!
+                Código utilizado por militares para facilitar a troca de informções.
               </ShoppingButtonDescription>
             </ShoppingButtonInfo>            
           </ShoppingButton>
-          <ShoppingButton onPress={() => {navigation.navigate('Home')}}>
+          <ShoppingButton onPress={() => {navigation.navigate('CodeN')}}>
             <SVGLoader name="shopping_cart" width={41} height={40} />
             <ShoppingButtonInfo>
               <ShoppingButtonTitle>Código Numérico</ShoppingButtonTitle>
               <ShoppingButtonDescription>
-                Aproveite todos os produtos com cashback!
+                Os códigos militares que usam números oridnais com forma de comunicação .
+              </ShoppingButtonDescription>
+            </ShoppingButtonInfo>            
+          </ShoppingButton>
+          <ShoppingButton onPress={() => {navigation.navigate('CodeAFI')}}>
+            <SVGLoader name="shopping_cart" width={41} height={40} />
+            <ShoppingButtonInfo>
+              <ShoppingButtonTitle>Alfabeto Fonético Internacional</ShoppingButtonTitle>
+              <ShoppingButtonDescription>
+                É uma forma de representação padronizada dos sons do idioma falado.
               </ShoppingButtonDescription>
             </ShoppingButtonInfo>            
           </ShoppingButton>

@@ -50,7 +50,6 @@ interface Props {
 }
 
 const HeaderNav: React.FC<Props> = ({navigation, title, subtitle, icon}) => {
-  const [balanceIsVisible, setBalanceIsVisible] = useState(true);
 
   const snapPoints = [-width - 20, (-width - 20) / 2, 0];
 
