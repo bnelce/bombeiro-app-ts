@@ -1,8 +1,4 @@
-# :bank: inter-clone
-
-## :iphone: Preview
-
-- You can see the preview screenshots [here](/preview).
+# :bank: Bombeiro Civil Operacional
 
 ## :exclamation: Possible improvements
 
