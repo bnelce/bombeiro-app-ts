@@ -71,7 +71,7 @@ const SignIn: React.FC = () => {
               </User>
             </UserInfoRow>
             <SignInButtonContainer
-              onPress={() => handleSignIn("mael.dazareia@gmail.com", "123456")}
+              onPress={() => handleSignIn("italo_barboza@hotmail.com", "1234657890")}
             >
               <SignInButton>
                 {loading ? (
