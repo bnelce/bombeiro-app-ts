@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-community/async-storage";
+import api from '../services/api';
 import { AppLoading } from "expo";
 
 interface User {
@@ -28,24 +29,15 @@ export const AuthProvider: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   async function signIn(email: string, password: string) {
-    const response: PromiseResponse = await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({
-          data: {
-            user: {
-              id: 1,
-              email: "mael.dazareia@gmail.com",
-              name: "ismael de jesus",
-            },
-          },
-        });
-      }, 2000);
-    });
+    console.log('antes do post');   
+    console.log('email', email);   
+    console.log('senha', password); 
+    const response: any = await api.post('/sessions', {email,password});
+    console.log('depois do post'); 
+    console.log(response);   
 
     const { user } = response.data;
-
     await AsyncStorage.setItem("@inter-clone:user", JSON.stringify(user));
-
     setUser(user);
   }
 
