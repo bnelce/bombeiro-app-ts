@@ -109,10 +109,10 @@ const Header: React.FC = () => {
               <AccountBalanceInfo>Vidas alheias, riquezas salvar!</AccountBalanceInfo>
             </LeftSide>
           </AccountInfo>
-          <Avatar>
-            <MaterialCommunityIcons name="fire" size={40} color="#ff500f" />
-            {/*<Avatar onPress={() => signOut()}>          
-            <Initials>ID</Initials>*/}
+          {/*<Avatar>
+            <MaterialCommunityIcons name="fire" size={40} color="#ff500f" />*/}
+            <Avatar onPress={() => signOut()}>          
+            <Initials>ID</Initials>
         </Avatar>
       </HeaderContent>
       <SideIndicator>
