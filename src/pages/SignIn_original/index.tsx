@@ -3,7 +3,6 @@ import { ActivityIndicator } from "react-native";
 
 import SVGLoader from "../../components/SVGLoader";
 import CustomIcon from "../../components/CustomIcon";
-import Input from "../../components/Input";
 import { useAuth } from "../../contexts/auth";
 
 import {
@@ -36,9 +35,7 @@ import {
   Receive,
   ReceiveButton,
   ReceiveText,
-  TInput
 } from "./styles";
-import { TextInput } from "react-native-gesture-handler";
 
 const SignIn: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -58,17 +55,19 @@ const SignIn: React.FC = () => {
       <CardsContainer>
         <Cards>
           <Login>
-            <UserInfoRow>              
+            <UserInfoRow>
+              <Avatar>
+                <Initials>ID</Initials>
+              </Avatar>
               <User>
-                <Name>Login</Name>
-                <TInput/>                         
+                <Name>ISMAEL DE JESUS</Name>
+                <Account>1644746-8</Account>
               </User>
-            </UserInfoRow>
-            <UserInfoRow>              
-              <User>
-                <Name>Senha</Name>
-                <TInput/>          
-              </User>
+              <ChangeAccountButtonContainer>
+                <ChangeAccountButton>
+                  <ChangeAccountText>TROCAR</ChangeAccountText>
+                </ChangeAccountButton>
+              </ChangeAccountButtonContainer>
             </UserInfoRow>
             <SignInButtonContainer
               onPress={() => handleSignIn("mael.dazareia@gmail.com", "123456")}
@@ -82,6 +81,32 @@ const SignIn: React.FC = () => {
               </SignInButton>
             </SignInButtonContainer>
           </Login>
+          <ISafe>
+            <SVGLoader name="isafe_logo" width={120} height={40} />
+            <Generate>
+              <GenerateButton>
+                <CustomIcon name="four-dots" size={30} color="#FF8700" />
+              </GenerateButton>
+              <GenerateText>Recuperar Senha</GenerateText>
+            </Generate>
+          </ISafe>          
+          {/*<Interpag>
+            <SVGLoader name="interpag_logo" width={140} height={40} />
+            <InterpagButtons>
+              <Pay>
+                <PayButton>
+                  <CustomIcon name="interpag-pay" size={30} color="#FF8700" />
+                </PayButton>
+                <PayText>Pagar</PayText>
+              </Pay>
+              <Receive>
+                <ReceiveButton>
+                  <CustomIcon name="qr-code-scan" size={30} color="#FF8700" />
+                </ReceiveButton>
+                <ReceiveText>Receber</ReceiveText>
+              </Receive>
+            </InterpagButtons>
+          </Interpag>*/}
         </Cards>
       </CardsContainer>
     </Container>

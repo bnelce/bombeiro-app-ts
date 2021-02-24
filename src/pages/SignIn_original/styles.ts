@@ -139,11 +139,6 @@ export const GenerateButton = styled.TouchableOpacity`
   justify-content: center;
   background: #fff;
 `;
-export const TInput = styled.TextInput`
-  flex: 1;
-  color: #000;
-  font-size: 16px;
-`;
 
 export const GenerateText = styled.Text`
   margin-top: 5px;
