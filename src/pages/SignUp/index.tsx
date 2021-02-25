@@ -40,7 +40,7 @@ import {
 } from "./styles";
 import { TextInput } from "react-native-gesture-handler";
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
   const { signIn } = useAuth();
@@ -88,4 +88,4 @@ const SignIn: React.FC = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
