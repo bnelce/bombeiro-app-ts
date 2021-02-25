@@ -39,16 +39,13 @@ import {
   TInput
 } from "./styles";
 import { TextInput } from "react-native-gesture-handler";
-import { onChange } from "react-native-reanimated";
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
 
   const { signIn } = useAuth();
 
-  function handleSignIn(): void {
+  function handleSignIn(email: string, password: string) {
     setLoading(true);
     signIn(email, password);
   }
@@ -64,19 +61,17 @@ const SignIn: React.FC = () => {
             <UserInfoRow>              
               <User>
                 <Name>Login</Name>
-                <TInput onChangeText={text => setEmail(text)}/>                         
+                <TInput/>                         
               </User>
             </UserInfoRow>
             <UserInfoRow>              
               <User>
                 <Name>Senha</Name>
-                <TInput
-                onChangeText={text => setPassword(text)}
-                />          
+                <TInput/>          
               </User>
             </UserInfoRow>
             <SignInButtonContainer
-              onPress={() => handleSignIn()}
+              onPress={() => handleSignIn("italo_barboza@hotmail.com", "1234567890")}
             >
               <SignInButton>
                 {loading ? (
@@ -93,4 +88,4 @@ const SignIn: React.FC = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
