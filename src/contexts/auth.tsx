@@ -4,13 +4,15 @@ import api from '../services/api';
 import { AppLoading } from "expo";
 
 interface User {
-  id: number;
-  email: string;
-  name: string;
+    id_user: number,
+    full_name: string,
+    peace_name: string,
+    phone_number: string,    
 }
 interface PromiseResponse {
   data: {
-    user: User;
+    user: User,
+    token: string
   };
 }
 
@@ -32,7 +34,7 @@ export const AuthProvider: React.FC = ({ children }) => {
     console.log('antes do post');   
     console.log('email', email);   
     console.log('senha', password); 
-    const response: any = await api.post('/sessions', {email,password});
+    const response: PromiseResponse = await api.post('/sessions', {email,password});
     console.log('depois do post'); 
     console.log(response);   
 
