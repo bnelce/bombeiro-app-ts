@@ -21,11 +21,11 @@ const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 import {  MenuItemContainer, MenuItem, Icon, MenuItemTitle } from "./styles";
 
 const items = [
-  {
+  /*{
     icon: <Feather name="bar-chart" size={30} color="#ff8700" />,
     title: "Dashboard",
     route: "Laws",
-  },
+  },*/
   {
     icon: <FontAwesome name="fire-extinguisher" size={30} color="#ff8700" />,
     title: "Ocorrências",
@@ -36,21 +36,21 @@ const items = [
     title: "Notícias",
     route: "Laws",
   },
-  {
+  /*{
     icon: <MaterialCommunityIcons name="brain" size={30} color="#ff8700" />,
     title: "Escala de Glasgow",
     route: "Laws",
-  },
+  },*/
   {
     icon: <Octicons name="law" size={30} color="#ff8700" />,
-    title: "Legislação",
+    title: "Leis e Normas",
     route: "Laws",
   },
-  {
+  /*{
     icon: <Octicons name="checklist" size={30} color="#ff8700" />,
     title: "NBRs",
     route: "CodeMenu",
-  },
+  },*/
   {
     icon: <Feather name="radio" size={30} color="#ff8700" />,
     title: "Códigos Operacionais",

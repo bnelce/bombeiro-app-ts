@@ -4,13 +4,15 @@ import api from '../services/api';
 import { AppLoading } from "expo";
 
 interface User {
-  id: number;
-  email: string;
-  name: string;
+    id_user: number,
+    full_name: string,
+    peace_name: string,
+    phone_number: string,    
 }
 interface PromiseResponse {
   data: {
-    user: User;
+    user: User,
+    token: string
   };
 }
 
@@ -29,9 +31,9 @@ export const AuthProvider: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   async function signIn(email: string, password: string) {
-
-    // Ver como faz o "catch" caso tenha algum erro no post
+   // Ver como faz o "catch" caso tenha algum erro no post
     const response: any = await api.post('/sessions', {email,password});
+    const response: PromiseResponse = await api.post('/sessions', {email,password});
 
     const { user } = response.data;
     await AsyncStorage.setItem("@inter-clone:user", JSON.stringify(user));
