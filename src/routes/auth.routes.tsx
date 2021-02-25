@@ -3,8 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import SignIn from "../pages/SignIn";
-import SignUp from "src/pages/SignUp";
-import ForgotPassword from "src/pages/ForgotPassword";
+import SignUp from "../pages/SignUp";
+import ForgotPassword from "../pages/ForgotPassword";
 
 const Stack = createStackNavigator();
 
