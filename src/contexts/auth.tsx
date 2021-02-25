@@ -31,12 +31,9 @@ export const AuthProvider: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   async function signIn(email: string, password: string) {
-    console.log('antes do post');   
-    console.log('email', email);   
-    console.log('senha', password); 
+   // Ver como faz o "catch" caso tenha algum erro no post
+    const response: any = await api.post('/sessions', {email,password});
     const response: PromiseResponse = await api.post('/sessions', {email,password});
-    console.log('depois do post'); 
-    console.log(response);   
 
     const { user } = response.data;
     await AsyncStorage.setItem("@inter-clone:user", JSON.stringify(user));
