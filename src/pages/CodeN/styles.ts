@@ -295,3 +295,6 @@ export const FooterButtonText = styled.Text`
 export const FooterRightSide = styled.View`
   align-self: flex-end;
 `;
+
+ 
+
