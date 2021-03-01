@@ -32,7 +32,7 @@ export const AuthProvider: React.FC = ({ children }) => {
 
   async function signIn(email: string, password: string) {
    // Ver como faz o "catch" caso tenha algum erro no post
-    const response: any = await api.post('/sessions', {email,password});
+    //const response: any = await api.post('/sessions', {email,password});
     const response: PromiseResponse = await api.post('/sessions', {email,password});
 
     const { user } = response.data;

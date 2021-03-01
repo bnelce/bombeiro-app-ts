@@ -14,33 +14,13 @@ import {
   Cards,
   Login,
   UserInfoRow,
-  Avatar,
-  Initials,
   User,
   Name,
-  Account,
-  ChangeAccountButton,
-  ChangeAccountText,
-  ChangeAccountButtonContainer,
   SignInButtonContainer,
   SignInButton,
   SignInText,
-  ISafe,
-  Generate,
-  GenerateButton,
-  GenerateText,
-  Interpag,
-  InterpagButtons,
-  Pay,
-  PayButton,
-  PayText,
-  Receive,
-  ReceiveButton,
-  ReceiveText,
   TInput
 } from "./styles";
-import { TextInput } from "react-native-gesture-handler";
-import { onChange } from "react-native-reanimated";
 
 const SignIn: React.FC = () => {
   const [loading, setLoading] = useState(false);
