@@ -39,8 +39,8 @@ export const Item = styled.View`
   flex-direction: row;
   align-items: center;
   background: #f5f6fa;
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 6px;
 `;
 
@@ -66,6 +66,51 @@ border-bottom-color: #CCC;
 padding-bottom: 10;
 margin-top: 10;
 `;
+
+export const EditButtonContainer = styled.TouchableOpacity``;
+
+export const EditButton = styled(LinearGradient).attrs({
+  colors: ["#091A7A", "#3366FF"],
+  end: [0.6, 1],
+})`
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  borderRadius: 10px;
+  padding: 10px;
+  elevation: 10px;
+  shadow-opacity: 10px;
+  shadowColor: #ccc;
+  align-items: center;
+`;
+
+export const DeleteButtonContainer = styled.TouchableOpacity``;
+
+export const DeleteButton = styled(LinearGradient).attrs({
+  colors: ["#78070E", "#D83B1D"],
+  end: [0.6, 1],
+})`
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  borderRadius: 10px;
+  padding: 10px;
+  elevation: 10px;
+  shadow-opacity: 10px;
+  shadowColor: #ccc;
+  align-items: center;
+`;
+
 
 export const Subactivity = styled.Text` 
   color: #4b4e5c;

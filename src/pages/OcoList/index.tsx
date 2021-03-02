@@ -4,7 +4,6 @@ import { Feather as Icon } from '@expo/vector-icons';
 import UserAvatar from 'react-native-user-avatar';
 import SVGLoader from "../../components/SVGLoader";
 import HeaderNav from "../../components/HeaderNav";
-import styles2 from './styles2';
 
 
 import {
@@ -16,6 +15,10 @@ import {
   Localization,
   ItemTextContainer,
   ButtonsContainer,
+  EditButtonContainer,
+  EditButton,
+  DeleteButtonContainer,
+  DeleteButton,
   Separator,
   Footer,
   FooterLeftSide,
@@ -43,37 +46,37 @@ const ocurrences = [
   },
   {
     id: "002",
-    activity: "Salvamento",
-    subactivity: "Salvamento aquático",
-    localization: "Crocobeach",
+    activity: "Atendimento Pré-Hospitalar",
+    subactivity: "Atendimento Pré-Hospitalar",
+    localization: "Via Sul",
     initialDate: "teste",
   },
   {
     id: "003",
     activity: "Salvamento",
     subactivity: "Salvamento aquático",
-    localization: "Crocobeach",
+    localization: "Itaparicá",
     initialDate: "teste",
   },
   {
     id: "004",
-    activity: "Salvamento",
-    subactivity: "Salvamento aquático",
-    localization: "Crocobeach",
+    activity: "Combate a Incêndio",
+    subactivity: "Incêndio residencial",
+    localization: "Parangaba",
     initialDate: "teste",
   },
   {
     id: "005",
-    activity: "Salvamento",
-    subactivity: "Salvamento aquático",
-    localization: "Crocobeach",
+    activity: "Atendimento Pré-Hospitalar",
+    subactivity: "RCP",
+    localization: "North Shopping",
     initialDate: "teste",
   },
   {
     id: "006",
-    activity: "Salvamento",
-    subactivity: "Salvamento aquático",
-    localization: "Crocobeach",
+    activity: "Prevenção",
+    subactivity: "Palestra",
+    localization: "CBMCE",
     initialDate: "teste",
   }
 
@@ -136,24 +139,26 @@ function getInitials(name = '') {
 };
 return (<Item>            
           <AvatarContainer>
-            <UserAvatar size={50} name={getInitials('Combate a incêndio')} />
+            <UserAvatar size={50} name={getInitials(item.activity)} />
           </AvatarContainer>
           <ItemTextContainer>
-            <Subactivity>Combate a incêndio</Subactivity>
-            <Localization>Localização</Localization>
-            <Localization>há alguns dias</Localization>
+            <Subactivity>{item.activity}</Subactivity>
+            <Localization>{item.subactivity}</Localization>
+            <Localization>{item.localization}</Localization>
           </ItemTextContainer>
           <ButtonsContainer>
-            <TouchableOpacity 
-              style={styles2.deleteButton}
-              onPress={() => {}}> 
-              <Icon name="trash" color="white" size={18} />
-            </TouchableOpacity> 
-            <TouchableOpacity 
-              style={styles2.editButton} 
-              onPress={handleEditPress}> 
+          <DeleteButtonContainer
+              onPress={handleDeletePress}> 
+              <DeleteButton>
               <Icon name="edit" color="white" size={18} />
-            </TouchableOpacity> 
+              </DeleteButton>
+            </DeleteButtonContainer> 
+            <EditButtonContainer
+              onPress={handleEditPress}> 
+              <EditButton>
+              <Icon name="edit" color="white" size={18} />
+              </EditButton>
+            </EditButtonContainer> 
           </ButtonsContainer>                     
         </Item>                       
         );
@@ -196,7 +201,7 @@ const OcoList: React.FC<Props> = ({ route, navigation }) => {
         <Separator />
         <Footer>
           <FooterLeftSide>
-            <FooterTitle>Rodapé da Legislação</FooterTitle>
+            <FooterTitle>Rodapé da Ocorrências</FooterTitle>
             <FooterDescription>
               Ajeitar Texto de acordo com o tema!
             </FooterDescription>
