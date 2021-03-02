@@ -29,7 +29,7 @@ const items = [
   {
     icon: <FontAwesome name="fire-extinguisher" size={30} color="#ff8700" />,
     title: "Ocorrências",
-    route: "Laws",
+    route: "OcoList",
   },
   {
     icon: <FontAwesome name="newspaper-o" size={30} color="#ff8700" />,

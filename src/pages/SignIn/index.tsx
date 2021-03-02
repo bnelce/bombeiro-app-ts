@@ -14,17 +14,12 @@ import {
   Cards,
   Login,
   UserInfoRow,
-  Avatar,
-  Initials,
   User,
   Name,
-  Account,
-  ChangeAccountButton,
-  ChangeAccountText,
-  ChangeAccountButtonContainer,
   SignInButtonContainer,
   SignInButton,
   SignInText,
+  TInput
   ISafe,
   Generate,
   GenerateButton,
@@ -44,8 +39,6 @@ import {
   ContainerCadastrar,
   LoginButtonBelowText2
 } from "./styles";
-import { TextInput } from "react-native-gesture-handler";
-import { onChange } from "react-native-reanimated";
 
 interface Props {
   navigation: void;
