@@ -29,13 +29,13 @@ export const ExpandBar = styled(LinearGradient).attrs({
   padding: 13px 0;
 `;
 
-export const Buttons = styled.View`
+export const ListContainer = styled.View`
   background: #fff;
   padding: 20px 20px 0;
 `;
 
 
-export const TextContainer = styled.View`
+export const Item = styled.View`
   flex-direction: row;
   align-items: center;
   background: #f5f6fa;
@@ -44,118 +44,57 @@ export const TextContainer = styled.View`
   border-radius: 6px;
 `;
 
-export const Title = styled.Text`
-  font-size: 17px;
-  font-weight: bold;
-  color: #4b4e5c;
-`;
-
-export const Subtitle = styled.Text`
-  margin-top: 13px;  
-  font-size: 15px;
-  font-weight: bold;
-  color: #4b4e5c;
-`;
-
-export const Article = styled.Text`
-  font-size: 13px;
-  margin-top: 13px;
-  color: #6a6e81;
-`;
-
-export const ShoppingButton = styled.TouchableOpacity`
+export const AvatarContainer = styled.View`
+  width: 60;
+  height: 60;
   flex-direction: row;
   align-items: center;
-  background: #f5f6fa;
-  padding: 0 25px;
-  margin-bottom: 20px;
-  height: 100px;
-  border-radius: 6px;
+`;
+
+
+export const ItemTextContainer = styled.View`
+  flex-direction: column;  
+  flex: 1; 
+  margin-left: 5;
+`;
+
+export const ButtonsContainer = styled.View`
+flex-direction: row-reverse;
+align-items: flex-end;
+border-bottom-width: 1;
+border-bottom-color: #CCC;
+padding-bottom: 10;
+margin-top: 10;
+`;
+
+export const Subactivity = styled.Text` 
+  color: #4b4e5c;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15;
+  line-height: 20;
+`;
+
+export const Localization = styled.Text`
+  color: #6a6e81;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12;
+  line-height: 20;
 `;
 
 export const ShoppingButtonInfo = styled.View`
-  margin-left: 15px;
+  margin-left: 1px;
   flex: 1;
+  flex-direction: row;
 `;
 
-export const ShoppingButtonTitle = styled.Text`
-  font-size: 17px;
-  font-weight: bold;
-  color: #4b4e5c;
-`;
-
-export const ShoppingButtonDescription = styled.Text`
-  font-size: 13px;
-  margin-top: 3px;
-  color: #6a6e81;
-`;
-
-export const RightArrow = styled.View`
-  margin-left: 10px;
-`;
 
 export const ButtonsInRow = styled.View`
   flex-direction: row;
   margin-bottom: 4px;
-`;
-
-export const InterTravelButton = styled.TouchableOpacity`
-  width: ${width * 0.5 - 30}px;
-  margin-right: 10px;
-  background: #f5f6fa;
-  padding: 20px;
-  border-radius: 6px;
-`;
-
-export const InterTravelButtonTitle = styled.Text`
-  font-size: 17px;
-  font-weight: bold;
-  margin-top: 15px;
-  color: #4b4e5c;
-`;
-
-export const InterTravelButtonDescription = styled.Text`
-  font-size: 13px;
-  margin-top: 5px;
-  color: #6a6e81;
-`;
-
-export const ShellBoxButton = styled.TouchableOpacity`
-  width: ${width * 0.5 - 30}px;
-  margin-left: 10px;
-  background: #f5f6fa;
-  padding: 20px;
-  border-radius: 6px;
-`;
-
-export const ShellBoxButtonTitle = styled.Text`
-  font-size: 17px;
-  font-weight: bold;
-  margin-top: 15px;
-  color: #4b4e5c;
-`;
-
-export const ShellBoxButtonDescription = styled.Text`
-  font-size: 13px;
-  margin-top: 5px;
-  color: #6a6e81;
-`;
-
-export const LifeStyleMenuItem = styled.TouchableOpacity`
-  width: ${(width - 40) / 3}px;
-  padding: 16px 0 8px;
-  border-radius: 6px;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const LifeStyleMenuImage = styled.View`
-  width: ${((width - 40) / 3) * 0.75}px;
-  height: ${((width - 40) / 3) * 0.75}px;
-  border-radius: ${((width - 40) / 3) * 0.8 * 0.5}px;
-  background: #f5f6fa;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const LifeStyleMenuTitle = styled.Text`
@@ -168,87 +107,6 @@ export const Separator = styled.View`
   height: 1px;
   background: #f5f6fa;
   margin-left: 20px;
-`;
-
-export const BottomCards = styled.View`
-  background: #fff;
-  padding: 16px;
-`;
-
-export const SupportCard = styled.View`
-  background: #f5f6fa;
-  border-radius: 6px;
-  padding: 15px;
-  margin-bottom: 16px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const SupportCardInfo = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const SupportAvatarContainer = styled.View`
-  background: #fdfffc;
-  width: 45px;
-  height: 45px;
-  border-radius: 22.5px;
-`;
-
-export const SupportAvatar = styled.Image`
-  width: 45px;
-  height: 45px;
-  border-radius: 22.5px;
-`;
-
-export const SupportQuestion = styled.View`
-  margin-left: 10px;
-`;
-
-export const SupportQuestionFirstLine = styled.Text`
-  color: #4b4e5c;
-`;
-
-export const SupportQuestionSecondLine = styled.Text`
-  color: #4b4e5c;
-`;
-
-export const SupportCardButton = styled.TouchableOpacity`
-  background: #fff;
-  height: 45px;
-  width: 45px;
-  border-radius: 22.5px;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ISafeCard = styled.View`
-  background: #f5f6fa;
-  border-radius: 6px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  height: 125px;
-`;
-
-export const ISafeCardGenerate = styled.View`
-  align-items: center;
-`;
-
-export const ISafeCardButton = styled.TouchableOpacity`
-  background: #fff;
-  height: 45px;
-  width: 45px;
-  border-radius: 22.5px;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ISafeCardGenerateText = styled.Text`
-  margin-top: 5px;
 `;
 
 export const Footer = styled.View`
