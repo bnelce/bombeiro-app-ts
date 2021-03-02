@@ -20,9 +20,31 @@ import {
   SignInButton,
   SignInText,
   TInput
+  ISafe,
+  Generate,
+  GenerateButton,
+  GenerateText,
+  Interpag,
+  InterpagButtons,
+  Pay,
+  PayButton,
+  PayText,
+  Receive,
+  ReceiveButton,
+  ReceiveText,
+  TInput,
+  LabelPassword,
+  Cadastrar,
+  LoginButtonBelowText1,
+  ContainerCadastrar,
+  LoginButtonBelowText2
 } from "./styles";
 
-const SignIn: React.FC = () => {
+interface Props {
+  navigation: void;
+}
+
+const SignIn: React.FC<Props> = ({navigation}) => {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -44,16 +66,17 @@ const SignIn: React.FC = () => {
           <Login>
             <UserInfoRow>              
               <User>
-                <Name>Login</Name>
-                <TInput onChangeText={text => setEmail(text)}/>                         
+                <TInput placeholder="Login" onChangeText={text => setEmail(text)}/>                         
               </User>
             </UserInfoRow>
             <UserInfoRow>              
               <User>
-                <Name>Senha</Name>
                 <TInput
+                secureTextEntry={true}
+                placeholder="Senha"
                 onChangeText={text => setPassword(text)}
-                />          
+                />
+                <LabelPassword>Esqueceu a senha?</LabelPassword>          
               </User>
             </UserInfoRow>
             <SignInButtonContainer
@@ -68,8 +91,15 @@ const SignIn: React.FC = () => {
               </SignInButton>
             </SignInButtonContainer>
           </Login>
+          
+          <Cadastrar/>
+          <ContainerCadastrar>
+          <LoginButtonBelowText2>Não tem uma conta?</LoginButtonBelowText2>   
+          <LoginButtonBelowText1 onPress={() => {navigation.navigate('SignUp')}}>Cadastre-se</LoginButtonBelowText1>
+          </ContainerCadastrar> 
         </Cards>
-      </CardsContainer>
+      </CardsContainer>      
+
     </Container>
   );
 };
