@@ -140,9 +140,20 @@ export const GenerateButton = styled.TouchableOpacity`
   background: #fff;
 `;
 export const TInput = styled.TextInput`
-  flex: 1;
-  color: #000;
-  font-size: 16px;
+  marginTop: 10px;
+  padding: 10px;
+  width: 300px;
+  backgroundColor: #fff;
+  fontSize: 16px;
+  borderRadius: 4px;
+  border: 2px;
+  border-color: #ececec; 
+`;
+
+export const LabelPassword = styled.Text`
+  padding: 10px;
+  color: #ff500f;
+  padding-left: 165px; 
 `;
 
 export const GenerateText = styled.Text`
@@ -201,4 +212,33 @@ export const ReceiveButton = styled.TouchableOpacity`
 export const ReceiveText = styled.Text`
   margin-top: 5px;
   color: #4b4e5c;
+`;
+
+export const ContainerCadastrar = styled.View`
+  flex: 1;
+  flex-direction: row;
+`;
+
+
+export const Cadastrar = styled.View`
+  borderWidth: 1;
+  borderColor: #e4e4e4;
+  margin-top: 102px;
+`;
+
+export const LoginButtonBelowText1 = styled.Text`
+  fontSize: 16px;
+  paddingHorizontal: 5px;
+  alignSelf: center;
+  color: #ff500f;
+  margin-top: 10px;
+`;
+
+export const LoginButtonBelowText2 = styled.Text`
+  padding-left: 30px;
+  fontSize: 16px;
+  paddingHorizontal: 5px;
+  alignSelf: center;
+  color: #8e8e8e;
+  margin-top: 10px;
 `;
