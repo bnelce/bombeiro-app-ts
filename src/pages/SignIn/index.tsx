@@ -19,7 +19,6 @@ import {
   SignInButtonContainer,
   SignInButton,
   SignInText,
-  TInput
   ISafe,
   Generate,
   GenerateButton,
