@@ -6,6 +6,7 @@ import CustomIcon from "../../components/CustomIcon";
 import Input from "../../components/Input";
 import { useAuth } from "../../contexts/auth";
 
+
 import {
   Container,
   LogoContainer,
@@ -13,14 +14,8 @@ import {
   Cards,
   Login,
   UserInfoRow,
-  Avatar,
-  Initials,
   User,
   Name,
-  Account,
-  ChangeAccountButton,
-  ChangeAccountText,
-  ChangeAccountButtonContainer,
   SignInButtonContainer,
   SignInButton,
   SignInText,
@@ -36,12 +31,19 @@ import {
   Receive,
   ReceiveButton,
   ReceiveText,
-  TInput
+  TInput,
+  LabelPassword,
+  Cadastrar,
+  LoginButtonBelowText1,
+  ContainerCadastrar,
+  LoginButtonBelowText2
 } from "./styles";
-import { TextInput } from "react-native-gesture-handler";
-import { onChange } from "react-native-reanimated";
 
-const SignIn: React.FC = () => {
+interface Props {
+  navigation: void;
+}
+
+const SignIn: React.FC<Props> = ({navigation}) => {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -63,16 +65,17 @@ const SignIn: React.FC = () => {
           <Login>
             <UserInfoRow>              
               <User>
-                <Name>Login</Name>
-                <TInput onChangeText={text => setEmail(text)}/>                         
+                <TInput placeholder="Login" onChangeText={text => setEmail(text)}/>                         
               </User>
             </UserInfoRow>
             <UserInfoRow>              
               <User>
-                <Name>Senha</Name>
                 <TInput
+                secureTextEntry={true}
+                placeholder="Senha"
                 onChangeText={text => setPassword(text)}
-                />          
+                />
+                <LabelPassword>Esqueceu a senha?</LabelPassword>          
               </User>
             </UserInfoRow>
             <SignInButtonContainer
@@ -87,8 +90,15 @@ const SignIn: React.FC = () => {
               </SignInButton>
             </SignInButtonContainer>
           </Login>
+          
+          <Cadastrar/>
+          <ContainerCadastrar>
+          <LoginButtonBelowText2>Não tem uma conta?</LoginButtonBelowText2>   
+          <LoginButtonBelowText1 onPress={() => {navigation.navigate('SignUp')}}>Cadastre-se</LoginButtonBelowText1>
+          </ContainerCadastrar> 
         </Cards>
-      </CardsContainer>
+      </CardsContainer>      
+
     </Container>
   );
 };
