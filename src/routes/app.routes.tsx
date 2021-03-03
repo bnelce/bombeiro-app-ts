@@ -10,6 +10,7 @@ import CodeS from "../pages/CodeS";
 import CodeN from "../pages/CodeN";
 import CodeAFI from "../pages/CodeAFI";
 import OcoList from "../pages/OcoList";
+import OcoAddForm from "../pages/OcoAddForm";
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ const Routes: React.FC = () => {
         <Stack.Screen name="CodeN" component={CodeN} />
         <Stack.Screen name="CodeAFI" component={CodeAFI} />
         <Stack.Screen name="OcoList" component={OcoList} />
+        <Stack.Screen name="OcoAddForm" component={OcoAddForm} />
       </Stack.Navigator>
     </NavigationContainer>
   );
