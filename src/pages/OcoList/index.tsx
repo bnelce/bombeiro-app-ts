@@ -1,11 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import { ScrollView, Alert, FlatList, Button } from "react-native";
+import { ScrollView, Alert, FlatList, Button, Text } from "react-native";
 import { Feather as Icon } from '@expo/vector-icons';
 import UserAvatar from 'react-native-user-avatar';
 import HeaderNav from "../../components/HeaderNav";
 import Footer from   "../../components/Footer";
 import { 
-  saveItem, 
   getItems,
   getItem,
   deleteItem } 
@@ -32,54 +31,23 @@ interface Props {
   navigation: void;
 }
 
-/*const ocurrences = [
-  {
-    id: "001",
-    activity: "Salvamento",
-    subactivity: "Salvamento aquático",
-    localization: "Crocobeach",
-    initialDate: "teste",
-  },
-  {
-    id: "002",
-    activity: "Atendimento Pré-Hospitalar",
-    subactivity: "Atendimento Pré-Hospitalar",
-    localization: "Via Sul",
-    initialDate: "teste",
-  },
-  {
-    id: "003",
-    activity: "Salvamento",
-    subactivity: "Salvamento aquático",
-    localization: "Itaparicá",
-    initialDate: "teste",
-  },
-  {
-    id: "004",
-    activity: "Combate a Incêndio",
-    subactivity: "Incêndio residencial",
-    localization: "Parangaba",
-    initialDate: "teste",
-  },
-  {
-    id: "005",
-    activity: "Atendimento Pré-Hospitalar",
-    subactivity: "RCP",
-    localization: "North Shopping",
-    initialDate: "teste",
-  },
-  {
-    id: "006",
-    activity: "Prevenção",
-    subactivity: "Palestra",
-    localization: "CBMCE",
-    initialDate: "teste",
-  }
+interface IItem {
+  id: string;
+  activity: string;
+  subactivity: string;
+  localization: string;
+  initialDate: string;
+  requester: string;
+  requesterPhone: string;
+  serviceStation: string;
+  finalDate: string;
+  historic: string;
+  complements: string;
 
-];*/
+}
 
 
-const renderOcurrence = ({item, index}) => {
+const renderOcurrence = ({item, index, navigation}) => {
   function handleDeletePress(){ 
     Alert.alert(
         "Atenção",
@@ -137,6 +105,7 @@ const renderOcurrence = ({item, index}) => {
             <AvatarContainer>
               <UserAvatar size={50} name={getInitials(item.activity)} />
             </AvatarContainer>
+            
             <ItemTextContainer>
               <Subactivity>{item.activity}</Subactivity>
               <Localization>{item.subactivity}</Localization>
@@ -160,7 +129,7 @@ const renderOcurrence = ({item, index}) => {
     );
   }
 
-const OcoList: React.FC<Props> = ({ route, navigation }) => {
+const OcoList: React.FC <Props> = ({ route, navigation }) => {
   const [ocurrences, setOcurrences] = useState([]); 
   const scrollViewRef = useRef<ScrollView>(null);
  
@@ -180,14 +149,16 @@ const OcoList: React.FC<Props> = ({ route, navigation }) => {
           title="Novo"
           onPress={() =>  navigation.navigate("OcoAddForm")}
         />
-        <ListContainer>                
+        <ListContainer>
+        {ocurrences ?                 
         <FlatList
           data={ocurrences}
           renderItem={renderOcurrence}                        
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item: IItem) => item.id}
           removeClippedSubviews={true}
           showsVerticalScrollIndicator={false}
-        />
+        />:
+        <Text>Sem Ocorrências</Text>}
         </ListContainer>
         <Separator />
         <Footer />
