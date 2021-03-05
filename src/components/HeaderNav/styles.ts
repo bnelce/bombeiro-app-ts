@@ -14,7 +14,7 @@ export const Container = styled(LinearGradient).attrs({
   end: [1.5, 1.5],
 })`
   padding: ${20 + statusBarHeight}px 20px 0;
-  height: ${height * 0.24}px;
+  height: ${height * 0.21}px;
 `;
 
 export const HeaderContent = styled.View`
@@ -25,75 +25,40 @@ export const AccountInfo = styled(Animated.View)`
   position: absolute;
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
-`;
-
-export const LeftSide = styled(Animated.View)``;
-
-export const AccountBalanceLabel = styled.Text`
-  font-size: 16px;
-  color: #fff;
-`;
-
-export const AccountBalanceRow = styled.View`
-  flex-direction: row;
   align-items: center;
 `;
 
-export const AccountBalance = styled.View`
-  flex-direction: row;
+export const InfoContainer = styled.View`
+  flex-direction: column;  
+  margin-left: 10px;
 `;
 
-export const AccountBalanceCurrency = styled.Text`
-  margin-right: 3px;
-  font-size: 20px;
-  color: #fff;
+export const BackContainer = styled.TouchableOpacity`
+  flex-direction: column;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+
 `;
 
-export const AccountBalanceValue = styled.Text`
+export const Title = styled.Text`
   font-weight: bold;
   font-size: 20px;
   color: #fff;
 `;
 
-export const VisibilityToggle = styled.TouchableOpacity`
-  margin-left: 15px;
-`;
-
-export const AccountBalanceInfo = styled.Text`
+export const Subtitle = styled.Text`
   color: #fff;
   font-size: 12px;
 `;
 
-export const RightSide = styled(Animated.View)``;
-
 export const Avatar = styled.TouchableOpacity`
-  background: #fff;
+  background: transparent;
   width: 50px;
   height: 50px;
   border-radius: 25px;
   align-items: center;
   justify-content: center;
   margin-left: auto;
+ 
 `;
-
-export const Initials = styled.Text`
-  font-size: 25px;
-  font-weight: bold;
-  color: #ff500f;
-`;
-
-export const SideIndicator = styled.View`
-  flex-direction: row;
-  margin-top: 18px;
-`;
-
-export const ActiveIndicator = styled(Animated.View)`
-  position: absolute;
-`;
-
-export const LeftEmptyIndicator = styled.View`
-  margin-right: 5px;
-`;
-
-export const RightEmptyIndicator = styled.View``;

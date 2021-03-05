@@ -45,8 +45,8 @@ export const Item = styled.View`
 `;
 
 export const AvatarContainer = styled.View`
-  width: 60;
-  height: 60;
+  width: 60px;
+  height: 60px;
   flex-direction: row;
   align-items: center;
 `;
@@ -55,16 +55,16 @@ export const AvatarContainer = styled.View`
 export const ItemTextContainer = styled.View`
   flex-direction: column;  
   flex: 1; 
-  margin-left: 5;
+  margin-left: 5px;
 `;
 
 export const ButtonsContainer = styled.View`
 flex-direction: row-reverse;
 align-items: flex-end;
-border-bottom-width: 1;
+border-bottom-width: 1px;
 border-bottom-color: #CCC;
-padding-bottom: 10;
-margin-top: 10;
+padding-bottom: 10px;
+margin-top: 10px;
 `;
 
 export const EditButtonContainer = styled.TouchableOpacity``;
