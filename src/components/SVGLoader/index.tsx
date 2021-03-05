@@ -25,6 +25,8 @@ import BannerNews from "../../assets/images/banner_news.svg";
 import BannerCode from "../../assets/images/banner_code.svg";
 import BannerGlasgow from "../../assets/images/banner_glasgow.svg";
 import BannerOco from "../../assets/images/10063.svg";
+import BombCodQ from "../../assets/images/bombeirocodq.svg";
+import BombCodN from "../../assets/images/bmcodn.svg";
 
 
 interface Props {
@@ -66,6 +68,8 @@ const SVGLoader: React.FC<Props> = ({ name, width, height }) => {
     banner_code:  <BannerCode width={width} height={height} />,
     banner_glasgow:  <BannerGlasgow width={width} height={height} />,
     banner_oco:  <BannerOco width={width} height={height} />,
+    bombeirocodq:  <BombCodQ width={width} height={height} />,
+    bmcodn:  <BombCodN width={width} height={height} />,
   };
 
   return vectors[name];

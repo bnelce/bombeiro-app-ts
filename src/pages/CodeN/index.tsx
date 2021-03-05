@@ -46,7 +46,13 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
 
     
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
-       <View>
+      
+       <HeaderNav 
+        title="Código Númerico"
+        subtitle="Códigos para comunicações via rádio"
+        navigation={navigation}
+      />
+       <View style={{marginBottom:40}} >
         <AdMobBanner
           bannerSize="fullBanner"
           adUnitID="ca-app-pub-6660984130044244/7058801940"  
@@ -54,11 +60,6 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
           servePersonalizedAds  
           onDidFailToReceiveAdWithError={ (err)=>  console.log} />
       </View>
-       <HeaderNav 
-        title="Código Númerico"
-        subtitle="Códigos para comunicações via rádio"
-        navigation={navigation}
-      />
       <Content>
 
       
@@ -94,8 +95,8 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
               </FooterButton>
             </FooterButtonContainer>
           </FooterLeftSide>
-          <FooterRightSide>
-            <SVGLoader name="footer_share" width={155} height={152} />
+          <FooterRightSide margin={20}>
+            <SVGLoader name="bmcodn" width={155} height={152} />
           </FooterRightSide>
         </Footer>
       </Content>
