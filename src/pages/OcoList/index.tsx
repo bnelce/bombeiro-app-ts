@@ -143,6 +143,7 @@ const OcoList: React.FC <Props> = ({ route, navigation }) => {
         title="Ocorrências"
         subtitle="Suas Ocorrências"
         navigation={navigation}
+        image="emblema"
       />
       <Content>
         <Button
