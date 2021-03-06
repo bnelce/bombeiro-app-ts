@@ -58,6 +58,7 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
         title="Código Númerico"
         subtitle="Códigos para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
       />
       <Content>
 

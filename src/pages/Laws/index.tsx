@@ -39,7 +39,12 @@ const Laws: React.FC<Props> = ({ navigation }) => {
 
   return (
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
-      <HeaderNav />
+       <HeaderNav 
+        title="AJEITAR"
+        subtitle="AJEITAR"
+        navigation={navigation}
+        image="emblema"
+      />
       <Content>
         <Buttons>
           <TextContainer>
