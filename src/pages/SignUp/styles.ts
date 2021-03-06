@@ -1,97 +1,329 @@
 import styled from "styled-components/native";
+import { Dimensions, Platform } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { BaseButton } from "react-native-gesture-handler";
+import Animated from "react-native-reanimated";
+import Constants from "expo-constants";
 
-export const Container = styled.View`
+const { width } = Dimensions.get("window");
+
+export const Container = styled.ScrollView.attrs({
+  contentContainerStyle: {
+    justifyContent: "space-between",
+  },
+})`
+  background: #f5f6fa;
+`;
+
+export const Content = styled.View`
+  margin-top: -36px;
+`;
+
+export const ExpandBarContainer = styled.TouchableOpacity``;
+
+export const ExpandBar = styled(LinearGradient).attrs({
+  colors: ["#f5f6fa", "#fff"],
+})`
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0;
+`;
+
+export const Buttons = styled.View`
+  background: #fff;
+  padding: 20px 20px 0;
+`;
+
+
+export const TextContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  background: #f5f6fa;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+`;
+
+export const Title = styled.Text`
+  font-size: 17px;
+  font-weight: bold;
+  color: #4b4e5c;
+`;
+
+export const Subtitle = styled.Text`
+  margin-top: 13px;  
+  font-size: 15px;
+  font-weight: bold;
+  color: #4b4e5c;
+`;
+
+export const Article = styled.Text`
+  font-size: 13px;
+  margin-top: 13px;
+  color: #6a6e81;
+`;
+
+export const ShoppingButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  background: #f5f6fa;
+  padding: 0 25px;
+  margin-bottom: 20px;
+  height: 100px;
+  border-radius: 6px;
+`;
+
+export const ShoppingButtonInfo = styled.View`
+  margin-left: 15px;
   flex: 1;
 `;
 
-export const LogoContainer = styled(LinearGradient).attrs({
-  colors: ["#ff500f", "#ff8700"],
-  start: [0, 1],
-  end: [1, -1],
-})`
-  height: 45%;
+export const ShoppingButtonTitle = styled.Text`
+  font-size: 17px;
+  font-weight: bold;
+  color: #4b4e5c;
+`;
+
+export const ShoppingButtonDescription = styled.Text`
+  font-size: 13px;
+  margin-top: 3px;
+  color: #6a6e81;
+`;
+
+export const RightArrow = styled.View`
+  margin-left: 10px;
+`;
+
+export const ButtonsInRow = styled.View`
+  flex-direction: row;
+  margin-bottom: 4px;
+`;
+
+export const InterTravelButton = styled.TouchableOpacity`
+  width: ${width * 0.5 - 30}px;
+  margin-right: 10px;
+  background: #f5f6fa;
+  padding: 20px;
+  border-radius: 6px;
+`;
+
+export const InterTravelButtonTitle = styled.Text`
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #4b4e5c;
+`;
+
+export const InterTravelButtonDescription = styled.Text`
+  font-size: 13px;
+  margin-top: 5px;
+  color: #6a6e81;
+`;
+
+export const ShellBoxButton = styled.TouchableOpacity`
+  width: ${width * 0.5 - 30}px;
+  margin-left: 10px;
+  background: #f5f6fa;
+  padding: 20px;
+  border-radius: 6px;
+`;
+
+export const ShellBoxButtonTitle = styled.Text`
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #4b4e5c;
+`;
+
+export const ShellBoxButtonDescription = styled.Text`
+  font-size: 13px;
+  margin-top: 5px;
+  color: #6a6e81;
+`;
+
+export const LifeStyleMenuItem = styled.TouchableOpacity`
+  width: ${(width - 40) / 3}px;
+  padding: 16px 0 8px;
+  border-radius: 6px;
   align-items: center;
   justify-content: center;
 `;
 
-export const LogoImage = styled.Image.attrs({
-  resizeMode: "contain",
-})`
-  width: 100px;
-  flex: 1;
-`;
-
-export const CardsContainer = styled.View`
-  flex: 1;
-  background: #fff;
-  padding: 0 20px 20px;
-`;
-
-export const Cards = styled.View`
-  position: absolute;
-  width: 100%;
-  margin-left: 20px;
-  top: -25px;
-`;
-
-export const Login = styled.View`
+export const LifeStyleMenuImage = styled.View`
+  width: ${((width - 40) / 3) * 0.75}px;
+  height: ${((width - 40) / 3) * 0.75}px;
+  border-radius: ${((width - 40) / 3) * 0.8 * 0.5}px;
   background: #f5f6fa;
-  padding: 20px 20px 15px;
-  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const UserInfoRow = styled.View`
+export const LifeStyleMenuTitle = styled.Text`
+  margin-top: 8px;
+  font-size: 13px;
+  color: #4b4e5c;
+`;
+
+export const Separator = styled.View`
+  height: 1px;
+  background: #f5f6fa;
+  margin-left: 20px;
+`;
+
+export const BottomCards = styled.View`
+  background: #fff;
+  padding: 16px;
+`;
+
+export const SupportCard = styled.View`
+  background: #f5f6fa;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 16px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const SupportCardInfo = styled.View`
   flex-direction: row;
   align-items: center;
 `;
 
-export const Avatar = styled.View`
-  background: #e7e7ef;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
+export const SupportAvatarContainer = styled.View`
+  background: #fdfffc;
+  width: 45px;
+  height: 45px;
+  border-radius: 22.5px;
 `;
 
-export const Initials = styled.Text`
-  color: #f5f6fa;
-  font-size: 18px;
+export const SupportAvatar = styled.Image`
+  width: 45px;
+  height: 45px;
+  border-radius: 22.5px;
+`;
+
+export const SupportQuestion = styled.View`
+  margin-left: 10px;
+`;
+
+export const SupportQuestionFirstLine = styled.Text`
+  color: #4b4e5c;
+`;
+
+export const SupportQuestionSecondLine = styled.Text`
+  color: #4b4e5c;
+`;
+
+export const SupportCardButton = styled.TouchableOpacity`
+  background: #fff;
+  height: 45px;
+  width: 45px;
+  border-radius: 22.5px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ISafeCard = styled.View`
+  background: #f5f6fa;
+  border-radius: 6px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 125px;
+`;
+
+export const ISafeCardGenerate = styled.View`
+  align-items: center;
+`;
+
+export const ISafeCardButton = styled.TouchableOpacity`
+  background: #fff;
+  height: 45px;
+  width: 45px;
+  border-radius: 22.5px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ISafeCardGenerateText = styled.Text`
+  margin-top: 5px;
+`;
+
+export const Footer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 0 0 20px;
+`;
+
+export const FooterLeftSide = styled.View`
+  padding-bottom: 20px;
+  justify-content: space-between;
+  flex: 1;
+`;
+
+export const FooterTitle = styled.Text`
+  font-size: 20px;
   font-weight: bold;
+  color: #4b4e5c;
+`;
+
+export const FooterDescription = styled.Text`
+  font-size: 16px;
+  color: #8c91a9;
+`;
+
+export const FooterButtonContainer = styled.TouchableOpacity``;
+
+export const FooterButton = styled(LinearGradient).attrs({
+  colors: ["#ff500f", "#ff8700"],
+  end: [0.6, 1],
+})`
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+  align-self: flex-start;
+`;
+
+export const FooterButtonText = styled.Text`
+  color: #fff;
+  font-weight: bold;
+`;
+
+export const FooterRightSide = styled.View`
+  align-self: flex-end;
+`;
+
+export const UserInfoRow = styled.View`
+flex-direction: row;
+align-items: center;
 `;
 
 export const User = styled.View``;
 
-export const Name = styled.Text`
-  color: #4d4e60;
-  font-size: 15px;
+export const TInput = styled.TextInput`
+  marginTop: 10px;
+  marginLeft: 6px;
+  padding: 10px;
+  width: 300px;
+  backgroundColor: #fff;
+  fontSize: 16px;
+  borderRadius: 4px;
+  border: 2px;
+  border-color: #ececec; 
 `;
 
-export const Account = styled.Text`
-  color: #999;
-  font-size: 15px;
-`;
-
-export const ChangeAccountButtonContainer = styled.View`
-  margin-left: auto;
-  border: 1px solid #e7e7ef;
-  border-radius: 4px;
-`;
-
-export const ChangeAccountButton = styled(BaseButton)`
-  padding: 5px 15px;
-`;
-
-export const ChangeAccountText = styled.Text`
-  color: #4d4e60;
-  font-weight: bold;
+export const LabelPassword = styled.Text`
+  padding: 10px;
+  color: #ff500f;
+  padding-left: 165px; 
 `;
 
 export const SignInButtonContainer = styled.TouchableOpacity`
   margin-top: 20px;
+  padding-right: 24px;
 `;
 
 export const SignInButton = styled(LinearGradient).attrs({
@@ -109,96 +341,4 @@ export const SignInText = styled.Text`
   color: #f5f6fa;
   font-weight: bold;
   font-size: 15px;
-`;
-
-export const ISafe = styled.View`
-  background: #f5f6fa;
-  margin-top: 15px;
-  padding: 30px 20px;
-  border-radius: 6px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const ISafeLogo = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const Generate = styled.View`
-  align-items: center;
-`;
-
-export const GenerateButton = styled.TouchableOpacity`
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 9px;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-`;
-export const TInput = styled.TextInput`
-  flex: 1;
-  color: #000;
-  font-size: 16px;
-`;
-
-export const GenerateText = styled.Text`
-  margin-top: 5px;
-  color: #4b4e5c;
-`;
-
-export const Interpag = styled.View`
-  background: #f5f6fa;
-  margin-top: 15px;
-  padding: 30px 20px 30px 30px;
-  border-radius: 6px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const InterpagButtons = styled.View`
-  flex-direction: row;
-`;
-
-export const Pay = styled.View`
-  align-items: center;
-  margin-right: 20px;
-`;
-
-export const PayButton = styled.TouchableOpacity`
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 9px;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-`;
-
-export const PayText = styled.Text`
-  margin-top: 5px;
-  color: #4b4e5c;
-`;
-
-export const Receive = styled.View`
-  align-items: center;
-`;
-
-export const ReceiveButton = styled.TouchableOpacity`
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 9px;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-`;
-
-export const ReceiveText = styled.Text`
-  margin-top: 5px;
-  color: #4b4e5c;
 `;

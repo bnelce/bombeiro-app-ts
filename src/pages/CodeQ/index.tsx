@@ -216,8 +216,8 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
               </FooterButton>
             </FooterButtonContainer>
           </FooterLeftSide>
-          <FooterRightSide>
-            <SVGLoader name="footer_share" width={155} height={152} />
+          <FooterRightSide margin={20}>
+            <SVGLoader name="bombeirocodq" width={155} height={152}  />
           </FooterRightSide>
         </Footer>
       </Content>
