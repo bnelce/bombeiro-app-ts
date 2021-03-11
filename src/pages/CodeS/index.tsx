@@ -68,8 +68,8 @@ const CodeS: React.FC<Props> = ({ navigation }) => {
 
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
        <HeaderNav 
-        title="Código S"
-        subtitle="Código britânico para comunicações via rádio"
+        title="Numeral ONU"
+        subtitle=""
         navigation={navigation} 
         image="emblema"
       />
@@ -78,50 +78,52 @@ const CodeS: React.FC<Props> = ({ navigation }) => {
         <Buttons>
           <TextContainer>
             <ShoppingButtonInfo>
-              <Title>CodeS</Title>
-              <Subtitle>Dispõe sobre a profissão de Bombeiro Civil e dá outras providências.</Subtitle>
+              <Title>Numeral ONU</Title>
               <Article>
-                Art. 1o O exercício da profissão de Bombeiro Civil reger-se-á
-                pelo disposto nesta Lei.
+              Código ONU ou Número ONU para produtos químicos é o número de série de 4 ou mais dígitos gravados como chassis nas embalagens maiores que 5kg , dado ao artigo ou substância química, de acordo com o sistema das Nações Unidas
               </Article>
-              <Article>
-                Art. 2o Considera-se Bombeiro Civil aquele que, habilitado nos
-                termos desta Lei, exerça, em caráter habitual, função remunerada
-                e exclusiva de prevenção e combate a incêndio, como empregado
-                contratado diretamente por empresas privadas ou públicas,
-                sociedades de economia mista, ou empresas especializadas em
-                prestação de serviços de prevenção e combate a incêndio.
-              </Article>
-              <Article>§ 1o (VETADO)</Article>
-              <Article>
-                § 2o No atendimento a sinistros em que atuem, em conjunto, os
-                Bombeiros Civis e o Corpo de Bombeiros Militar, a coordenação e
-                a direção das ações caberão, com exclusividade e em qualquer
-                hipótese, à corporação militar.
-              </Article>
-              <Article>Art. 3o  (VETADO) </Article>
-              <Article>Art. 4o  As funções de Bombeiro Civil são assim classificadas: </Article>
-              <Article>I - Bombeiro Civil, nível básico, combatente direto ou não do fogo;</Article>
-              <Article>II - Bombeiro Civil Líder, o formado como técnico em prevenção e combate a incêndio, em nível de ensino médio, comandante de guarnição em seu horário de trabalho; </Article>
-              <Article>III - Bombeiro Civil Mestre, o formado em engenharia com especialização em prevenção e combate a incêndio, responsável pelo Departamento de Prevenção e Combate a Incêndio. </Article>
-              <Article>Art. 5o  A jornada do Bombeiro Civil é de 12 (doze) horas de trabalho por 36 (trinta e seis) horas de descanso, num total de 36 (trinta e seis) horas semanais. </Article>
+               
+            </ShoppingButtonInfo>
+          </TextContainer>
+        </Buttons>
+
+        <Buttons>
+          <TextContainer>
+            <ShoppingButtonInfo>
+            <Subtitle>	Classe 1 – Explosivos	</Subtitle>
+            <Article>	Subclasse 1.1 Substâncias e artefatos com risco de explosão  em massa;	</Article>
+            <Article>	Subclasse 1.2 Substâncias e artefatos com risco de projeção;	</Article>
+            <Article>	Subclasse 1.3 Substâncias e artefatos com risco predominante de fogo;	</Article>
+            <Article>	Subclasse 1.4 Substâncias e artefatos que não representam risco significativo;	</Article>
+            <Article>	Subclasse 1.5 Substâncias pouco sensíveis;	</Article>
+            <Article>	Subclasse 1.6 Substâncias extremamente insensíveis.	</Article>
             
-              <Article>Art. 6o  É assegurado ao Bombeiro Civil: </Article>
-              <Article>I - uniforme especial a expensas do empregador; </Article>
-              <Article>II - seguro de vida em grupo, estipulado pelo empregador; </Article>
-              <Article>III - adicional de periculosidade de 30% (trinta por cento) do salário mensal sem os acréscimos resultantes de gratificações, prêmios ou participações nos lucros da empresa; </Article>
-              <Article>IV - o direito à reciclagem periódica. </Article>
-              <Article>Art. 7o  (VETADO) </Article>
-              <Article>Art. 8o  As empresas especializadas e os cursos de formação de Bombeiro Civil, bem como os cursos técnicos de segundo grau de prevenção e combate a incêndio que infringirem as disposições desta Lei, ficarão sujeitos às seguintes penalidades: </Article>
-              <Article>I - advertência; </Article>
-              <Article>II - (VETADO) </Article>
-              <Article>III - proibição temporária de funcionamento; </Article>
-              <Article>IV - cancelamento da autorização e registro para funcionar.</Article>
-              <Article>Art. 9o  As empresas e demais entidades que se utilizem do serviço de Bombeiro Civil poderão firmar convênios com os Corpos de Bombeiros Militares dos Estados, dos Territórios e do Distrito Federal, para assistência técnica a seus profissionais. </Article>
-              <Article>Art. 10.  (VETADO) </Article>
-              <Article>Art. 11.  Esta Lei entra em vigor na data de sua publicação. </Article>
-              <Article>Brasília,  12  de  janeiro  de 2009; 188o da Independência e 121o da República.  </Article>
-              <Subtitle>LUIZ INÁCIO LULA DA SILVA</Subtitle>
+            <Subtitle>	Classe 2 – Gases	</Subtitle>
+            <Article>	Subclasse 2.1 Gases inflamáveis;	</Article>
+            <Article>	Subclasse 2.2 Gases comprimidos não tóxicos e não inflamáveis;	</Article>
+            <Article>	Subclasse 2.3 Gases tóxicos por inalação.	</Article>
+            
+            <Subtitle>	Classe 3 – Líquidos inflamáveis	</Subtitle>
+            <Article>	Classe 4 – Sólidos inflamáveis; Substâncias auto-reagentes e explosivos sólidos insensibilizados	</Article>
+            <Article>	Subclasse 4.1Sólidos inflamáveis;	</Article>
+            <Article>	Subclasse 4.2 Substâncias passíveis de combustão espontânea;	</Article>
+            <Article>	Subclasse 4.3 Substâncias que, em contato com a água, emitem gases inflamáveis.	</Article>
+            
+            <Subtitle>	Classe 5 – Substâncias Oxidantes e Peróxidos Orgânicos.	</Subtitle>
+            <Article>	Subclasse 5.1 Substâncias Oxidantes;	</Article>
+            <Article>	Subclasse 5.2 Peróxidos Orgânicos.	</Article>
+            
+            <Subtitle>	Classe 6 – Substâncias Tóxicas e Substâncias Infectantes.	</Subtitle>
+            <Article>	Subclasse 6.1 Substâncias Tóxicas;	</Article>
+            <Article>	Subclasse 6.2 Substâncias Infectantes.	</Article>
+            
+            <Subtitle>	Classe 7 – Substâncias Radioativas	</Subtitle>
+            
+            <Subtitle>	Classe 8 – Substâncias Corrosivas	</Subtitle>
+            
+            <Subtitle>	Classe 9 – Substâncias Perigosas Diversas	</Subtitle>
+
+               
             </ShoppingButtonInfo>
           </TextContainer>
         </Buttons>

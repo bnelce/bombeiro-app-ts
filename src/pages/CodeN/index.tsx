@@ -81,7 +81,7 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
         <Buttons>
           <TextContainer>
             <ShoppingButtonInfo>
-              <Title>Código Númerico</Title>              
+              <Title>NUMÉRICO SEQUENCIAL</Title>              
               <Article>0 - Negativo</Article>
               <Article>1 - Primeiro</Article>              
               <Article>2 - Segundo</Article>              
@@ -95,6 +95,26 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
             </ShoppingButtonInfo>
           </TextContainer>
         </Buttons>
+
+        <Buttons>
+          <TextContainer>
+            <ShoppingButtonInfo>
+            <Title>	Número por extenso e pronúncia </Title>
+            <Article>	 0      Zero      ZE – RO	</Article>
+            <Article>	 1      Uno       U – NO	</Article>
+            <Article>	 2      Dois      DO – IS	</Article>
+            <Article>	 3      Três      TRE – IS	</Article>
+            <Article>	 4      Quatro    QUA – TRO	</Article>
+            <Article>	 5      Cinco     CIN – CO	</Article>
+            <Article>	 6      Seis      MEIA - DÚZIA	</Article>
+            <Article>	 7      Sete      SE – TE	</Article>
+            <Article>	 8      Oito      OI – TO	</Article>
+            <Article>  9      Nono      NO- VE</Article> 
+        
+            </ShoppingButtonInfo>
+          </TextContainer>
+        </Buttons>
+
         <Separator />
         <Footer>
           <FooterLeftSide>
