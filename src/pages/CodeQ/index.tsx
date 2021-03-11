@@ -25,7 +25,7 @@ import {
 } from "./styles";
 
 
-// ADMOB  $$$
+// ADMOB 
 import {
   AdMobBanner,
   AdMobInterstitial,
@@ -51,31 +51,36 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
   }
 
   return (
-    <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
-       <HeaderNav 
-        title="Código Q"
-        subtitle="Código britânico para comunicações via"
-        navigation={navigation}
-      />
-
-      <View>
-         
+    <View style={{flex:1}}>
+    
+     
+    <View style={{marginTop:30  }}>
+        
         <AdMobBanner
           bannerSize="fullBanner"
           adUnitID="ca-app-pub-6660984130044244/7058801940"  
           setTestDeviceIDAsync
           servePersonalizedAds  
           onDidFailToReceiveAdWithError={ (err)=>  console.log} />
-         <Text>{`\n`}</Text>
-      </View>
+         
+     </View>
+
+    <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
+       <HeaderNav 
+        title="Código Q"
+        subtitle={`Código britânico para comunicações\nvia rádio.`}
+        navigation={navigation} 
+        image="emblema"
+      />
+
+     
 
       
       <Content>
         <Buttons>
           <TextContainer>
             <ShoppingButtonInfo>
-              <Title>Código Q.</Title>
-              <Subtitle>Código britânico para comunicações via rádio.</Subtitle>
+            <Title>Código Q</Title>
               <Article>
               QAP:	Está na escuta?	Permaneça na escuta ou estou na escuta.
               </Article>
@@ -225,6 +230,7 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
         </Footer>
       </Content>
     </Container>
+    </View>
   );
 };
 

@@ -13,12 +13,14 @@ export const Container = styled(LinearGradient).attrs({
   colors: ["#ff500f", "#ff8700"],
   end: [1.5, 1.5],
 })`
-  padding: ${20 + statusBarHeight}px 20px 0;
+  padding: ${3 + statusBarHeight}px 20px 0;
   height: ${height * 0.21}px;
 `;
 
 export const HeaderContent = styled.View`
   flex-direction: row;
+  margin-bottom:5%;
+  
 `;
 
 export const AccountInfo = styled(Animated.View)`

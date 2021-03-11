@@ -24,7 +24,10 @@ import {
   TextContainer,
  } from "./styles";
 
-// ADMOB  $$$
+ 
+ 
+
+// ADMOB 
 import {
   AdMobBanner,
   AdMobInterstitial,
@@ -33,6 +36,8 @@ import {
   } from 'expo-ads-admob';
 
   ///
+
+
 interface Props {
   navigation: void;
 }
@@ -43,6 +48,19 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
   const scrollViewRef = useRef<ScrollView>(null);
 
   return (
+    <View style={{flex:1}}>
+    
+     
+    <View style={{marginTop:30  }}>
+        
+        <AdMobBanner
+          bannerSize="fullBanner"
+          adUnitID="ca-app-pub-6660984130044244/7058801940"  
+          setTestDeviceIDAsync
+          servePersonalizedAds  
+          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+         
+     </View>
 
     
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
@@ -51,15 +69,10 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
         title="Código Númerico"
         subtitle="Códigos para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
+
       />
-       <View style={{marginBottom:40}} >
-        <AdMobBanner
-          bannerSize="fullBanner"
-          adUnitID="ca-app-pub-6660984130044244/7058801940"  
-          setTestDeviceIDAsync
-          servePersonalizedAds  
-          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
-      </View>
+       
       <Content>
 
       
@@ -102,6 +115,7 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
       </Content>
       
     </Container>
+    </View>
   );
 };
 

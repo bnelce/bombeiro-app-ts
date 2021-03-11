@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 
 import SVGLoader from "../../components/SVGLoader";
 import HeaderNav from "../../components/HeaderNav";
 
 import {
-  Container,
+  Container, 
   Content,
   Buttons,
   ShoppingButtonInfo,
@@ -24,6 +24,20 @@ import {
   TextContainer,
 } from "./styles";
 
+
+
+// ADMOB 
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  setTestDeviceIDAsync
+  
+  } from 'expo-ads-admob';
+
+  ///
+
+
+
 interface Props {
   navigation: void;
 }
@@ -38,8 +52,28 @@ const CodeS: React.FC<Props> = ({ navigation }) => {
   }
 
   return (
+    <View style={{flex:1}}>
+    
+     
+    <View style={{marginTop:30  }}>
+        
+        <AdMobBanner
+          bannerSize="fullBanner"
+          adUnitID="ca-app-pub-6660984130044244/7058801940"  
+          setTestDeviceIDAsync
+          servePersonalizedAds  
+          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+         
+     </View>
+
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
-      <HeaderNav />
+       <HeaderNav 
+        title="Código S"
+        subtitle="Código britânico para comunicações via rádio"
+        navigation={navigation} 
+        image="emblema"
+      />
+
       <Content>
         <Buttons>
           <TextContainer>
@@ -110,6 +144,7 @@ const CodeS: React.FC<Props> = ({ navigation }) => {
         </Footer>
       </Content>
     </Container>
+    </View>
   );
 };
 
