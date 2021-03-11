@@ -54,7 +54,7 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
        <HeaderNav 
         title="Código Q"
-        subtitle="Código britânico para comunicações via rádio"
+        subtitle="Código britânico para comunicações via"
         navigation={navigation}
       />
 
