@@ -50,7 +50,7 @@ const CodeAFI: React.FC<Props> = ({ navigation }) => {
     <View style={{flex:1}}>
     
      
-    <View style={{marginTop:30  }}>
+    {/* <View style={{marginTop:30  }}>
         
         <AdMobBanner
           bannerSize="fullBanner"
@@ -59,7 +59,7 @@ const CodeAFI: React.FC<Props> = ({ navigation }) => {
           servePersonalizedAds  
           onDidFailToReceiveAdWithError={ (err)=>  console.log} />
          
-     </View>
+     </View> */}
      
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
        <HeaderNav 
@@ -100,6 +100,19 @@ const CodeAFI: React.FC<Props> = ({ navigation }) => {
               <Article>	  X     X Ray       EX- REY	</Article>
               <Article>	  Y     Yankee      IAN – QUI	</Article>
               <Article>	  Z     Zulu        ZU – LU	</Article>
+
+              <View style={{width:'100%', marginLeft:-20   }}>
+                
+                <AdMobBanner
+                style={{marginTop:20, marginBottom:20}}
+                  bannerSize="mediumRectangle"
+                  adUnitID="ca-app-pub-6660984130044244/7058801940"  
+                  setTestDeviceIDAsync
+                  servePersonalizedAds  
+                  onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+                
+            </View>
+
                     
             </ShoppingButtonInfo>
           </TextContainer>

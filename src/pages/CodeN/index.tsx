@@ -51,7 +51,7 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
     <View style={{flex:1}}>
     
      
-    <View style={{marginTop:30  }}>
+    {/* <View style={{marginTop:30  }}>
         
         <AdMobBanner
           bannerSize="fullBanner"
@@ -60,7 +60,7 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
           servePersonalizedAds  
           onDidFailToReceiveAdWithError={ (err)=>  console.log} />
          
-     </View>
+     </View> */}
 
     
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
@@ -110,6 +110,18 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
             <Article>	 7      Sete      SE – TE	</Article>
             <Article>	 8      Oito      OI – TO	</Article>
             <Article>  9      Nono      NO- VE</Article> 
+
+            <View style={{width:'100%', marginLeft:-20   }}>
+                
+                <AdMobBanner
+                style={{marginTop:20, marginBottom:20}}
+                  bannerSize="mediumRectangle"
+                  adUnitID="ca-app-pub-6660984130044244/7058801940"  
+                  setTestDeviceIDAsync
+                  servePersonalizedAds  
+                  onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+                
+            </View>
         
             </ShoppingButtonInfo>
           </TextContainer>

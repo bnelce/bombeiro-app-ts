@@ -103,7 +103,7 @@ const items = [
     <View style={{flex:1}}>
     
      
-     <View style={{marginTop:30  }}>
+    {/*  <View style={{marginTop:30  }}>
          
          <AdMobBanner
            bannerSize="fullBanner"
@@ -112,7 +112,7 @@ const items = [
            servePersonalizedAds  
            onDidFailToReceiveAdWithError={ (err)=>  console.log} />
           
-      </View>
+      </View> */}
      
       <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
       <HeaderNav 
