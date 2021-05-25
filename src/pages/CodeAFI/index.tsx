@@ -67,7 +67,6 @@ const CodeAFI: React.FC<Props> = ({ navigation }) => {
         subtitle={` `}
         navigation={navigation}
         image="emblema"
-
       />
       <Content>
         <Buttons>

@@ -72,12 +72,22 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
         image="emblema"
 
       />
-       
+
+       <View style={{marginBottom:40}} >
+        <AdMobBanner
+          bannerSize="fullBanner"
+          adUnitID="ca-app-pub-6660984130044244/7058801940"  
+          setTestDeviceIDAsync
+          servePersonalizedAds  
+          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+      </View>
+       <HeaderNav 
+        title="Código Númerico"
+        subtitle="Códigos para comunicações via rádio"
+        navigation={navigation}
+        image="emblema"
+      />
       <Content>
-
-      
-
-
         <Buttons>
           <TextContainer>
             <ShoppingButtonInfo>

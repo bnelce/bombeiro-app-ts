@@ -32,10 +32,7 @@ import {
   setTestDeviceIDAsync
   
   } from 'expo-ads-admob';
-
   ///
-
-  
 
 interface Props {
   navigation: void;
@@ -51,18 +48,23 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
   }
 
   return (
-    <View style={{flex:1}}>
-    
-     
+
+   <View style={{flex:1}}>
     {/* <View style={{marginTop:30  }}>
-        
+    <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
+       <HeaderNav 
+        title="Código Q"
+        subtitle="Código britânico para comunicações via rádio"
+        navigation={navigation}
+        image="emblema"
+      />
+      <View>
         <AdMobBanner
           bannerSize="fullBanner"
           adUnitID="ca-app-pub-6660984130044244/7058801940"  
           setTestDeviceIDAsync
           servePersonalizedAds  
-          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
-         
+          onDidFailToReceiveAdWithError={ (err)=>  console.log} />         
      </View> */}
 
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
