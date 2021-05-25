@@ -25,17 +25,14 @@ import {
 } from "./styles";
 
 
-// ADMOB  $$$
+// ADMOB 
 import {
   AdMobBanner,
   AdMobInterstitial,
   setTestDeviceIDAsync
   
   } from 'expo-ads-admob';
-
   ///
-
-  
 
 interface Props {
   navigation: void;
@@ -51,31 +48,41 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
   }
 
   return (
+
+   <View style={{flex:1}}>
+    {/* <View style={{marginTop:30  }}>
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
        <HeaderNav 
         title="Código Q"
         subtitle="Código britânico para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
       />
-
       <View>
-         
         <AdMobBanner
           bannerSize="fullBanner"
           adUnitID="ca-app-pub-6660984130044244/7058801940"  
           setTestDeviceIDAsync
           servePersonalizedAds  
-          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
-         <Text>{`\n`}</Text>
-      </View>
+          onDidFailToReceiveAdWithError={ (err)=>  console.log} />         
+     </View> */}
+
+    <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
+       <HeaderNav 
+        title="Código Q"
+        subtitle={`Código britânico para comunicações\nvia rádio.`}
+        navigation={navigation} 
+        image="emblema"
+      />
+
+     
 
       
       <Content>
         <Buttons>
           <TextContainer>
             <ShoppingButtonInfo>
-              <Title>Código Q.</Title>
-              <Subtitle>Código britânico para comunicações via rádio.</Subtitle>
+            <Title>Código Q</Title>
               <Article>
               QAP:	Está na escuta?	Permaneça na escuta ou estou na escuta.
               </Article>
@@ -152,6 +159,20 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
               <Article>	QTA	Devo cancelar o mensagem número ...?	Cancele o mensagem número ... .	</Article>
               <Article>	QTB	Concorda com minha contagem de palavras?	Eu não concordo com sua contagem de palavras; vou pedir a primeira letras ou dígito de cada palavra ou grupo.	</Article>
               
+              <View style={{width:'100%', marginLeft:-20   }}>
+                
+                  <AdMobBanner
+                  style={{marginTop:20, marginBottom:20}}
+                    bannerSize="mediumRectangle"
+                    adUnitID="ca-app-pub-6660984130044244/7058801940"  
+                    setTestDeviceIDAsync
+                    servePersonalizedAds  
+                    onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+                  
+              </View>
+
+
+
               <Article>	QTC	Quantos recados para transmitir?	Tenho ... recado transmitir (ou para ...).	</Article>
               <Article>	QTD	O que recolheu o barca ou a aeronave de salvamento?	.. (identificação) recolheu: ... 1 (número) sobreviventes. 2 ... restos de naufrágio. 3 ... (número) de cadáveres	</Article>
               <Article>	QTE 	Qual a minha orientação com relação a você? Ou Qual a minha orientação com relação a ... (indicativo de chamada)	Sua orientação verdadeira com relação a mim é... grau as... horas ou A orientação verdadeira de ...(indicativo de chamada) com relação a ... (indicativo de chamada) era de ... grau as ... horas. 	</Article>
@@ -225,6 +246,7 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
         </Footer>
       </Content>
     </Container>
+    </View>
   );
 };
 

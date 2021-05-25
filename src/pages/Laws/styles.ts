@@ -295,3 +295,10 @@ export const FooterButtonText = styled.Text`
 export const FooterRightSide = styled.View`
   align-self: flex-end;
 `;
+
+export const ViewLinksLaw = styled.View`
+justifyContent:space-between; 
+flexDirection:row;
+margin-right:20; 
+`;
+

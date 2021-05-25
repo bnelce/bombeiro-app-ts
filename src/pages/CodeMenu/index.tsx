@@ -37,11 +37,12 @@ const CodeMenu: React.FC<Props> = ({ navigation }) => {
         title="Códigos Operacionais"
         subtitle="Códigos para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
       />
       <Content>        
         <Buttons>
           <ShoppingButton onPress={() => {navigation.navigate('CodeQ')}}>
-            <SVGLoader name="shopping_cart" width={41} height={40} />
+            <SVGLoader name="firefighter" width={41} height={40} />
             <ShoppingButtonInfo>
               <ShoppingButtonTitle>Código Q</ShoppingButtonTitle>
               <ShoppingButtonDescription>
@@ -50,16 +51,16 @@ const CodeMenu: React.FC<Props> = ({ navigation }) => {
             </ShoppingButtonInfo>            
           </ShoppingButton>
           <ShoppingButton onPress={() => {navigation.navigate('CodeS')}}>
-            <SVGLoader name="shopping_cart" width={41} height={40} />
+            <SVGLoader name="shield" width={41} height={40} />
             <ShoppingButtonInfo>
-              <ShoppingButtonTitle>Código S</ShoppingButtonTitle>
+              <ShoppingButtonTitle>Numeral ONU</ShoppingButtonTitle>
               <ShoppingButtonDescription>
                 Código utilizado por militares para facilitar a troca de informções.
               </ShoppingButtonDescription>
             </ShoppingButtonInfo>            
           </ShoppingButton>
           <ShoppingButton onPress={() => {navigation.navigate('CodeN')}}>
-            <SVGLoader name="shopping_cart" width={41} height={40} />
+            <SVGLoader name="extintor" width={41} height={40} />
             <ShoppingButtonInfo>
               <ShoppingButtonTitle>Código Numérico</ShoppingButtonTitle>
               <ShoppingButtonDescription>
@@ -68,7 +69,7 @@ const CodeMenu: React.FC<Props> = ({ navigation }) => {
             </ShoppingButtonInfo>            
           </ShoppingButton>
           <ShoppingButton onPress={() => {navigation.navigate('CodeAFI')}}>
-            <SVGLoader name="shopping_cart" width={41} height={40} />
+            <SVGLoader name="firetruck" width={41} height={40} />
             <ShoppingButtonInfo>
               <ShoppingButtonTitle>Alfabeto Fonético Internacional</ShoppingButtonTitle>
               <ShoppingButtonDescription>

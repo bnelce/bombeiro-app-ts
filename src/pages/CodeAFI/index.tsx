@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView,View } from "react-native";
 
 import SVGLoader from "../../components/SVGLoader";
 import HeaderNav from "../../components/HeaderNav";
@@ -24,6 +24,19 @@ import {
   TextContainer,
 } from "./styles";
 
+
+// ADMOB 
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  setTestDeviceIDAsync
+  
+  } from 'expo-ads-admob';
+
+  ///
+
+
+
 interface Props {
   navigation: void;
 }
@@ -33,43 +46,73 @@ const CodeAFI: React.FC<Props> = ({ navigation }) => {
   const scrollViewRef = useRef<ScrollView>(null);
 
   return (
+
+    <View style={{flex:1}}>
+    
+     
+    {/* <View style={{marginTop:30  }}>
+        
+        <AdMobBanner
+          bannerSize="fullBanner"
+          adUnitID="ca-app-pub-6660984130044244/7058801940"  
+          setTestDeviceIDAsync
+          servePersonalizedAds  
+          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+         
+     </View> */}
+     
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
        <HeaderNav 
-        title="Alfabeto Fonético Internacional"
-        subtitle="Códigos para comunicações via rádio"
+        title={`Alfabeto Fonético\n Internacional`}
+        subtitle={` `}
         navigation={navigation}
+        image="emblema"
       />
       <Content>
         <Buttons>
           <TextContainer>
             <ShoppingButtonInfo>
               <Title>Alfabeto Fonético Internacional</Title>
-              <Article>A - Alpha</Article>              
-              <Article>B - Bravo</Article>              
-              <Article>C - Charlie</Article>              
-              <Article>D - Delta</Article>              
-              <Article>E - Echo</Article>              
-              <Article>F - Foxtrot</Article>              
-              <Article>G - Golf</Article>              
-              <Article>H - Hotel</Article>              
-              <Article>I - Indian</Article>              
-              <Article>J - Juliet</Article>              
-              <Article>K - Kilo</Article>              
-              <Article>L - Lima</Article>              
-              <Article>M - Mike</Article>              
-              <Article>N - November</Article>              
-              <Article>O - Oscar</Article>              
-              <Article>P - Papa</Article>              
-              <Article>Q - Québec</Article>              
-              <Article>R - Romeu</Article>              
-              <Article>S - Sierra</Article>              
-              <Article>T - Tango</Article>              
-              <Article>U - Uniform</Article>              
-              <Article>V - Victor</Article>              
-              <Article>W - Whiskey</Article>              
-              <Article>X - X Ray</Article>              
-              <Article>Y - Yankee</Article>              
-              <Article>Z - Zulu</Article>                            
+              <Article>	  A     Alpha       AL – FA	</Article>
+              <Article>	  B     Bravo       BRA – VO	</Article>
+              <Article>	  C     Charlie     CHAR – LIE	</Article>
+              <Article>	  D     Delta       DEL – TA	</Article>
+              <Article>	  E     Echo        E – CHO	</Article>
+              <Article>	  F     Foxtrot     FOX – TROT	</Article>
+              <Article>	  G     Golf        GOLFE	</Article>
+              <Article>	  H     Hotel       HO – TEL	</Article>
+              <Article>	  I     Indian      IN – DI – AN	</Article>
+              <Article>	  J     Juliet      JU – LI – ETE	</Article>
+              <Article>	  K     Kilo        KI – LO	</Article>
+              <Article>	  L     Lima        LI – MA	</Article>
+              <Article>	  M     Mike        MAI – QUE	</Article>
+              <Article>	  N     November    NO – VEM – BER	</Article>
+              <Article>	  O     Oscar       OS – CAR	</Article>
+              <Article>	  P     Papa        PA – PA	</Article>
+              <Article>	  Q     Québec      QUE – BE – QUE	</Article>
+              <Article>	  R     Romeu       RO – MEU	</Article>
+              <Article>	  S     Sierra      SI –E – RRA	</Article>
+              <Article>	  T     Tango       TAN – GO	</Article>
+              <Article>   U     Uniform     U- NI- FOR- ME	</Article>
+              <Article>	  V     Victor      VIC – TOR	</Article>
+              <Article>	  W     Whiskey     WHIS – KEY	</Article>
+              <Article>	  X     X Ray       EX- REY	</Article>
+              <Article>	  Y     Yankee      IAN – QUI	</Article>
+              <Article>	  Z     Zulu        ZU – LU	</Article>
+
+              <View style={{width:'100%', marginLeft:-20   }}>
+                
+                <AdMobBanner
+                style={{marginTop:20, marginBottom:20}}
+                  bannerSize="mediumRectangle"
+                  adUnitID="ca-app-pub-6660984130044244/7058801940"  
+                  setTestDeviceIDAsync
+                  servePersonalizedAds  
+                  onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+                
+            </View>
+
+                    
             </ShoppingButtonInfo>
           </TextContainer>
         </Buttons>
@@ -92,6 +135,7 @@ const CodeAFI: React.FC<Props> = ({ navigation }) => {
         </Footer>
       </Content>
     </Container>
+    </View>
   );
 };
 
