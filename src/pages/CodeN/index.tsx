@@ -24,7 +24,10 @@ import {
   TextContainer,
  } from "./styles";
 
-// ADMOB  $$$
+ 
+ 
+
+// ADMOB 
 import {
   AdMobBanner,
   AdMobInterstitial,
@@ -33,6 +36,8 @@ import {
   } from 'expo-ads-admob';
 
   ///
+
+
 interface Props {
   navigation: void;
 }
@@ -43,6 +48,19 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
   const scrollViewRef = useRef<ScrollView>(null);
 
   return (
+    <View style={{flex:1}}>
+    
+     
+    {/* <View style={{marginTop:30  }}>
+        
+        <AdMobBanner
+          bannerSize="fullBanner"
+          adUnitID="ca-app-pub-6660984130044244/7058801940"  
+          setTestDeviceIDAsync
+          servePersonalizedAds  
+          onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+         
+     </View> */}
 
     
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
@@ -51,7 +69,10 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
         title="Código Númerico"
         subtitle="Códigos para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
+
       />
+
        <View style={{marginBottom:40}} >
         <AdMobBanner
           bannerSize="fullBanner"
@@ -67,14 +88,10 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
         image="emblema"
       />
       <Content>
-
-      
-
-
         <Buttons>
           <TextContainer>
             <ShoppingButtonInfo>
-              <Title>Código Númerico</Title>              
+              <Title>NUMÉRICO SEQUENCIAL</Title>              
               <Article>0 - Negativo</Article>
               <Article>1 - Primeiro</Article>              
               <Article>2 - Segundo</Article>              
@@ -88,6 +105,38 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
             </ShoppingButtonInfo>
           </TextContainer>
         </Buttons>
+
+        <Buttons>
+          <TextContainer>
+            <ShoppingButtonInfo>
+            <Title>	Número por extenso e pronúncia </Title>
+            <Article>	 0      Zero      ZE – RO	</Article>
+            <Article>	 1      Uno       U – NO	</Article>
+            <Article>	 2      Dois      DO – IS	</Article>
+            <Article>	 3      Três      TRE – IS	</Article>
+            <Article>	 4      Quatro    QUA – TRO	</Article>
+            <Article>	 5      Cinco     CIN – CO	</Article>
+            <Article>	 6      Seis      MEIA - DÚZIA	</Article>
+            <Article>	 7      Sete      SE – TE	</Article>
+            <Article>	 8      Oito      OI – TO	</Article>
+            <Article>  9      Nono      NO- VE</Article> 
+
+            <View style={{width:'100%', marginLeft:-20   }}>
+                
+                <AdMobBanner
+                style={{marginTop:20, marginBottom:20}}
+                  bannerSize="mediumRectangle"
+                  adUnitID="ca-app-pub-6660984130044244/7058801940"  
+                  setTestDeviceIDAsync
+                  servePersonalizedAds  
+                  onDidFailToReceiveAdWithError={ (err)=>  console.log} />
+                
+            </View>
+        
+            </ShoppingButtonInfo>
+          </TextContainer>
+        </Buttons>
+
         <Separator />
         <Footer>
           <FooterLeftSide>
@@ -108,6 +157,7 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
       </Content>
       
     </Container>
+    </View>
   );
 };
 

@@ -300,5 +300,5 @@ export const ViewLinksLaw = styled.View`
 justifyContent:space-between; 
 flexDirection:row;
 margin-right:20; 
-
 `;
+

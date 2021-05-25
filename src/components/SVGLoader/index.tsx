@@ -31,7 +31,12 @@ import BrasaoBPC from "../../assets/images/brasao-bpc.svg";
 import S13 from "../../assets/images/s13.svg";
 import Sino from "../../assets/images/sino.svg";
 import Emblema from "../../assets/images/emblema.svg";
+import Firefighter from "../../assets/images/firefighter.svg";
+import Shield from "../../assets/images/shield.svg";
+import Firetruck from "../../assets/images/firetruck.svg";
+import Extintor from "../../assets/images/extintor.svg";
 import Book from "../../assets/images/book.svg";
+
 
 
 interface Props {
@@ -81,9 +86,14 @@ const SVGLoader: React.FC<Props> = ({ name, width, height }) => {
     s13:  <S13 width={width} height={height} />,
     sino:  <Sino width={width} height={height} />,
     emblema:  <Emblema width={width} height={height} />,
-    book:  <Book width={width} height={height} />,
 
+    firefighter:  <Firefighter width={width} height={height} />,
+    shield:  <Shield width={width} height={height} />,
+    firetruck:  <Firetruck width={width} height={height} />,
+    extintor:  <Extintor width={width} height={height} />,
+    book:  <Book width={width} height={height} />,
   };
+
 
   return vectors[name];
 };
