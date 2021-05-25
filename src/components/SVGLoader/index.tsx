@@ -31,6 +31,7 @@ import BrasaoBPC from "../../assets/images/brasao-bpc.svg";
 import S13 from "../../assets/images/s13.svg";
 import Sino from "../../assets/images/sino.svg";
 import Emblema from "../../assets/images/emblema.svg";
+import Book from "../../assets/images/book.svg";
 
 
 interface Props {
@@ -80,6 +81,7 @@ const SVGLoader: React.FC<Props> = ({ name, width, height }) => {
     s13:  <S13 width={width} height={height} />,
     sino:  <Sino width={width} height={height} />,
     emblema:  <Emblema width={width} height={height} />,
+    book:  <Book width={width} height={height} />,
 
   };
 
