@@ -38,6 +38,7 @@ const CodeAFI: React.FC<Props> = ({ navigation }) => {
         title="Alfabeto Fonético Internacional"
         subtitle="Códigos para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
       />
       <Content>
         <Buttons>

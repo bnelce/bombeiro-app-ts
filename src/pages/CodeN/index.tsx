@@ -60,6 +60,12 @@ const CodeN: React.FC<Props> = ({ navigation }) => {
           servePersonalizedAds  
           onDidFailToReceiveAdWithError={ (err)=>  console.log} />
       </View>
+       <HeaderNav 
+        title="Código Númerico"
+        subtitle="Códigos para comunicações via rádio"
+        navigation={navigation}
+        image="emblema"
+      />
       <Content>
 
       

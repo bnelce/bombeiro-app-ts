@@ -32,10 +32,7 @@ import {
   setTestDeviceIDAsync
   
   } from 'expo-ads-admob';
-
   ///
-
-  
 
 interface Props {
   navigation: void;
@@ -56,8 +53,8 @@ const CodeQ: React.FC<Props> = ({ navigation }) => {
         title="Código Q"
         subtitle="Código britânico para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
       />
-
       <View>
          
         <AdMobBanner

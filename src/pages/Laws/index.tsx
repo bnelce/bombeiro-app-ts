@@ -100,10 +100,14 @@ const Laws: React.FC<Props> = ({ navigation }) => {
 
   return (
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
-      {/* <HeaderNav /> */}
 
-    <View>
-         
+       <HeaderNav 
+        title="AJEITAR"
+        subtitle="AJEITAR"
+        navigation={navigation}
+        image="emblema"
+      />
+    <View>         
          <AdMobBanner
            bannerSize="fullBanner"
            adUnitID="ca-app-pub-6660984130044244/7058801940"  
@@ -112,11 +116,7 @@ const Laws: React.FC<Props> = ({ navigation }) => {
            onDidFailToReceiveAdWithError={ (err)=>  console.log} />
           <Text>{`\n`}</Text>
        </View>
-
-
       <Content>
-
-
       <FlatList
           data={items}
           keyExtractor={midias =>String(items.id)}

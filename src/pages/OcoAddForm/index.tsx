@@ -69,11 +69,19 @@ const OcoAddForm: React.FC<Props> = ({ route, navigation }) => {
 
   return (
     <Container showsVerticalScrollIndicator={false} ref={scrollViewRef}>
+      { id ? 
       <HeaderNav 
-        title="Addform"
-        subtitle="Addform"
+        title="Ocorrências"
+        subtitle="Editar Ocorrência"
         navigation={navigation}
-      />
+        image="emblema"
+      />:
+      <HeaderNav 
+        title="Ocorrências"
+        subtitle="Nova Ocorrência"
+        navigation={navigation}
+        image="emblema"
+      />}
       <Content>
         <ListContainer>                
         <View style={styles2.container}>

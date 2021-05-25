@@ -37,6 +37,7 @@ const CodeMenu: React.FC<Props> = ({ navigation }) => {
         title="Códigos Operacionais"
         subtitle="Códigos para comunicações via rádio"
         navigation={navigation}
+        image="emblema"
       />
       <Content>        
         <Buttons>
